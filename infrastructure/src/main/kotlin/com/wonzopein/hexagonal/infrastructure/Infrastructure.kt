@@ -1,4 +1,4 @@
-package com.example.hexagonal.infrastructure
+package com.wonzopein.hexagonal.infrastructure
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

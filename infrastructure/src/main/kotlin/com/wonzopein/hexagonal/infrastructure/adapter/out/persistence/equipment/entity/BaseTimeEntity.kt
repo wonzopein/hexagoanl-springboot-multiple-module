@@ -1,4 +1,4 @@
-package com.example.hexagonal.infrastructure.out.persistence.entity
+package com.wonzopein.hexagonal.infrastructure.adapter.out.persistence.equipment.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.EntityListeners
