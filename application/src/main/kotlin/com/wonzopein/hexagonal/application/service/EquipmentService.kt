@@ -21,7 +21,6 @@ class EquipmentService(
     DeleteEquipmentUseCase,
     GetEquipmentUseCase {
 
-
     /**
      * 설비 생성
      */
