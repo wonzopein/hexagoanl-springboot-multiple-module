@@ -1,11 +1,11 @@
 package com.wonzopein.hexagonal.application.service
 
-import com.wonzopein.hexagonal.application.port.`in`.CreateEquipmentUseCase
-import com.wonzopein.hexagonal.application.port.`in`.DeleteEquipmentUseCase
-import com.wonzopein.hexagonal.application.port.`in`.GetEquipmentUseCase
-import com.wonzopein.hexagonal.application.port.`in`.UpdateEquipmentUseCase
-import com.wonzopein.hexagonal.application.port.out.EquipmentEventPublisherPort
-import com.wonzopein.hexagonal.application.port.out.EquipmentPersistencePort
+import com.wonzopein.hexagonal.application.port.input.CreateEquipmentUseCase
+import com.wonzopein.hexagonal.application.port.input.DeleteEquipmentUseCase
+import com.wonzopein.hexagonal.application.port.input.GetEquipmentUseCase
+import com.wonzopein.hexagonal.application.port.input.UpdateEquipmentUseCase
+import com.wonzopein.hexagonal.application.port.output.EquipmentEventPublisherPort
+import com.wonzopein.hexagonal.application.port.output.EquipmentPersistencePort
 import com.wonzopein.hexagonal.domain.equipment.event.EquipmentCreateEvent
 import com.wonzopein.hexagonal.domain.equipment.event.EquipmentDeleteEvent
 import com.wonzopein.hexagonal.domain.equipment.event.EquipmentUpdateEvent
