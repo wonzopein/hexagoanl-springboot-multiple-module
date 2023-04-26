@@ -8,5 +8,5 @@ class Equipment{
     var name: String? = null
     var description: String? = null
     var type: EquipmentType = EquipmentType.UNKNOWN
-    private val ports: HashSet<Port> = HashSet()
+    private val ports: List<Port> = listOf()
 }
