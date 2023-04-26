@@ -11,7 +11,9 @@ class EquipmentPersistenceAdapter(
     private val equipmentPersistenceMapper: EquipmentPersistenceMapper
 ): EquipmentPersistencePort {
     override fun createEquipment(equipment: Equipment): Equipment {
-        TODO("Not yet implemented")
+        var equipmentEntity = equipmentPersistenceMapper.toEntity(equipment)
+        equipmentEntity = equipmentRepository.save(equipmentEntity)
+        return equipmentPersistenceMapper.toEquipment(equipmentEntity)
     }
 
     override fun updateEquipment(equipment: Equipment) {
@@ -23,7 +25,8 @@ class EquipmentPersistenceAdapter(
     }
 
     override fun getEquipment(id: UUID): Equipment {
-        TODO("Not yet implemented")
+        val equipmentEntity = equipmentRepository.findById(id).get()
+        return equipmentPersistenceMapper.toEquipment(equipmentEntity)
     }
 
 }

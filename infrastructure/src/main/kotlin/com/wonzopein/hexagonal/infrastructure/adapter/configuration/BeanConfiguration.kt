@@ -5,6 +5,7 @@ import com.wonzopein.hexagonal.infrastructure.adapter.output.eventpublisher.Equi
 import com.wonzopein.hexagonal.infrastructure.adapter.output.persistence.equipment.EquipmentPersistenceAdapter
 import com.wonzopein.hexagonal.infrastructure.adapter.output.persistence.equipment.mapper.EquipmentPersistenceMapper
 import com.wonzopein.hexagonal.infrastructure.adapter.output.persistence.equipment.repository.EquipmentRepository
+import com.wonzopein.hexagonal.infrastructure.adapter.output.tcp.equipment.EquipmentTcpAdapter
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -28,12 +29,18 @@ class BeanConfiguration {
     }
 
     @Bean
+    fun equipmentTcpAdapter(): EquipmentTcpAdapter {
+        return EquipmentTcpAdapter()
+    }
+
+    @Bean
     fun equipmentService(
         equipmentPersistenceAdapter: EquipmentPersistenceAdapter,
-        equipmentEventPublisherAdapter: EquipmentEventPublisherAdapter
+        equipmentEventPublisherAdapter: EquipmentEventPublisherAdapter,
+        equipmentTcpAdapter: EquipmentTcpAdapter
     ): EquipmentService
     {
-            return EquipmentService(equipmentPersistenceAdapter, equipmentEventPublisherAdapter)
+        return EquipmentService(equipmentPersistenceAdapter, equipmentEventPublisherAdapter, equipmentTcpAdapter)
     }
 
 
