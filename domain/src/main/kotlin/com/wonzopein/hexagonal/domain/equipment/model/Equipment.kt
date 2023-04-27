@@ -8,5 +8,12 @@ class Equipment{
     var name: String? = null
     var description: String? = null
     var type: EquipmentType = EquipmentType.UNKNOWN
-    private val ports: List<Port> = listOf()
+    val ports: MutableList<Port> = mutableListOf()
+
+//    fun addPort(port: Port){
+//        if(ports.contains(port)){
+//            return;
+//        }
+//        ports.add(port)
+//    }
 }
