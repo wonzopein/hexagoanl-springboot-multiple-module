@@ -28,4 +28,5 @@ class PortEntity: BaseTimeEntity() {
         return id.hashCode()
     }
 
+
 }

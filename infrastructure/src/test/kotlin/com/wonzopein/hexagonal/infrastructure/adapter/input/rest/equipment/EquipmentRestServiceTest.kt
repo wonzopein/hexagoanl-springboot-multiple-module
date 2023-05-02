@@ -61,6 +61,9 @@ class EquipmentRestServiceTest(
     @Test
     fun deleteEquipment() {
         val createEquipment = createEquipmentInner()
+        createEquipment.ports.add(Port(UUID.randomUUID(), "192.168.0.1", 8000,))
+        createEquipment.ports.add(Port(UUID.randomUUID(), "192.168.0.1", 9000,))
+        equipmentRestService.updateEquipment(createEquipment)
         equipmentRestService.deleteEquipment(createEquipment.id!!)
     }
 }

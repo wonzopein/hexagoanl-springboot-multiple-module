@@ -14,7 +14,7 @@ class EquipmentEntity: BaseTimeEntity() {
     var description: String? = null
     var type: EquipmentType = EquipmentType.UNKNOWN
 
-    @OneToMany(mappedBy = "equipment", orphanRemoval = true, cascade = [CascadeType.ALL])
+    @OneToMany(mappedBy = "equipment", orphanRemoval = true, cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     var ports: MutableList<PortEntity> = mutableListOf()
 
 //    fun addPort(port: PortEntity) {
